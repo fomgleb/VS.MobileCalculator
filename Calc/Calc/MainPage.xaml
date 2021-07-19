@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Calc.MainPage">
+
+    <Grid BackgroundColor="#24252a">
+        <Grid Grid.Row="0" Margin="0,0,0,150">
+            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Margin="20,0" VerticalOptions="EndAndExpand">
+                <Label  x:Name="secondLabel" Text="24 + 345 + 20" FontSize="Large" TextColor="#2abb9b" Visual="Default"/>
+                <Label x:Name="mainLabel" TextColor="White" Text="389" HorizontalOptions="EndAndExpand" FontSize="48"/>
+            </StackLayout>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0,-150,0,0">
+            <StackLayout Orientation="Vertical" Margin="10">
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Button x:Name="percentButton" Clicked="operationsButton_Clicked" Text="%" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="eraseMainButton" Clicked="operationsButton_Clicked"  Text="CE" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="eraseAllButton" Clicked="operationsButton_Clicked" Text="C" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="eraseButton" Clicked="operationsButton_Clicked" Text="⌫" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Button x:Name="oneDividedByButton" Clicked="operationsButton_Clicked" Text="1/x" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="degreeButton" Clicked="operationsButton_Clicked" Text="^" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="rootButton" Clicked="operationsButton_Clicked" Text="√" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="divideButton" Clicked="operationsButton_Clicked" Text="÷" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Button x:Name="sevenButton" Clicked="numberButton_Clicked" Text="7" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="eightButton" Clicked="numberButton_Clicked" Text="8" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="nineButton" Clicked="numberButton_Clicked" Text="9" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="timesButton" Clicked="operationsButton_Clicked" Text="×" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Button x:Name="fourButton" Clicked="numberButton_Clicked"  Text="4" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="fiveButton" Clicked="numberButton_Clicked" Text="5" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="sixButton" Clicked="numberButton_Clicked" Text="6" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="minusButton" Clicked="operationsButton_Clicked" Text="-" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Button x:Name="oneButton" Clicked="numberButton_Clicked" Text="1" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="twoButton" Clicked="numberButton_Clicked" Text="2" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="threeButton" Clicked="numberButton_Clicked" Text="3" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="plusButton" Clicked="operationsButton_Clicked" Text="+" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Button x:Name="negateButton" Clicked="operationsButton_Clicked" Text="+/-" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="zeroButton" Clicked="numberButton_Clicked" Text="0" TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="comaButton" Clicked="operationsButton_Clicked" Text="," TextColor="White" BackgroundColor="#2b2c31" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="equalsButton" Clicked="operationsButton_Clicked" Text="=" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            
+        </Grid>
+    </Grid>
+
+</ContentPage>
